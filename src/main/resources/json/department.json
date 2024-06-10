@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cf4ff1e1-6f25-4ea2-8433-e10712550db2",
+    "dp_name": "FINANCE"
+  },
+  {
+    "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+    "dp_name": "AUDIT"
+  },
+  {
+    "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+    "dp_name": "MARKETING"
+  },
+  {
+    "id": "93a996b6-d74c-4545-992b-169dd827446e",
+    "dp_name": "PRODUCTION"
+  }
+]

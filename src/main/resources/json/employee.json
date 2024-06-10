@@ -1,0 +1,198 @@
+[
+  {
+    "id": "a445978c-fd22-4b8a-bd09-cad80eb143f3",
+    "lastNm": "Kayling",
+    "firstNm": "Blake",
+    "jobNm": "President",
+    "manager_id": null,
+    "hireDt": "1991-11-18",
+    "salary": 6000.0,
+    "commission": null,
+    "department": {
+      "id": "cf4ff1e1-6f25-4ea2-8433-e10712550db2",
+      "dp_name": "FINANCE"
+    }
+  },
+  {
+    "id": "175db25f-074e-41a4-a9a1-0ca15d51fedc",
+    "lastNm": "Blaze",
+    "firstNm": "Jason",
+    "jobNm": "Manager",
+    "manager_id": 68319,
+    "hireDt": "1991-05-01",
+    "salary": 2750.0,
+    "commission": null,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "02c99698-c01c-431d-9c3e-8f913c4ed7ca",
+    "lastNm": "Dane",
+    "firstNm": "Claire",
+    "jobNm": "Manager",
+    "manager_id": 68319,
+    "hireDt": "1991-06-09",
+    "salary": 2550.0,
+    "commission": null,
+    "department": {
+      "id": "cf4ff1e1-6f25-4ea2-8433-e10712550db2",
+      "dp_name": "FINANCE"
+    }
+  },
+  {
+    "id": "9dea7ca7-9b13-4fe1-a589-4f87c788db05",
+    "lastNm": "Cortez",
+    "firstNm": "Jonas",
+    "jobNm": "MANAGER",
+    "manager_id": 68319,
+    "hireDt": "1991-04-02 ",
+    "salary": 2957.0,
+    "commission": null,
+    "department": {
+      "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+      "dp_name": "AUDIT"
+    }
+  },
+  {
+    "id": "0ca19d82-9669-47fd-9776-a8500ac768e2",
+    "lastNm": "Johannsen",
+    "firstNm": "Scarlet",
+    "jobNm": "Analyst",
+    "manager_id": 65646,
+    "hireDt": "1997-04-19",
+    "salary": 3100.0,
+    "commission": null,
+    "department": {
+      "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+      "dp_name": "AUDIT"
+    }
+  },
+  {
+    "id": "e61dd3ff-2d3f-4529-b019-ac99f0b3a879",
+    "lastNm": "Cortez",
+    "firstNm": "Frank",
+    "jobNm": "Analyst",
+    "manager_id": 65646,
+    "hireDt": "1991-12-03",
+    "salary": 3100.0,
+    "commission": null,
+    "department": {
+      "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+      "dp_name": "AUDIT"
+    }
+  },
+  {
+    "id": "f600dac4-417a-40a6-8ce6-f69f1e783a89",
+    "lastNm": "Tom",
+    "firstNm": "Sandrine",
+    "jobNm": "Clerk",
+    "manager_id": 69062,
+    "hireDt": "1990-12-18",
+    "salary": 900.0,
+    "commission": null,
+    "department": {
+      "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+      "dp_name": "AUDIT"
+    }
+  },
+  {
+    "id": "9d1e6008-425f-4523-a2b7-18738d9c5252",
+    "lastNm": "James",
+    "firstNm": "Adelyn",
+    "jobNm": "Salesman",
+    "manager_id": 66928,
+    "hireDt": "1991-02-20",
+    "salary": 1700.0,
+    "commission": 400.0,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "3f5a4873-dd4e-4b5f-b650-7c4a60d98c1f",
+    "lastNm": "Wade",
+    "firstNm": "Bryan",
+    "jobNm": "Salesman",
+    "manager_id": 66928,
+    "hireDt": "1991-02-22",
+    "salary": 1350.0,
+    "commission": 600.0,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "84628935-97e4-48d1-8d1a-15cb741c9dc0",
+    "lastNm": "Stella",
+    "firstNm": "Madden",
+    "jobNm": "Salesman",
+    "manager_id": 66928,
+    "hireDt": "1991-09-28",
+    "salary": 1350.0,
+    "commission": 1500.0,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "66c05c3e-612c-4ad6-81df-b02febf439e0",
+    "lastNm": "Lian",
+    "firstNm": "Tucker",
+    "jobNm": "Salesman",
+    "manager_id": 66928,
+    "hireDt": "1991-09-08",
+    "salary": 1600.0,
+    "commission": 0.0,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "90291ebd-f7b5-48ce-a9f4-bce3b61448a4",
+    "lastNm": "Cruz",
+    "firstNm": "Andres",
+    "jobNm": "Clerk",
+    "manager_id": 67858,
+    "hireDt": "1997-05-23",
+    "salary": 1200.0,
+    "commission": null,
+    "department": {
+      "id": "967e28ce-667a-457c-b924-2eadd14a1a75",
+      "dp_name": "AUDIT"
+    }
+  },
+  {
+    "id": "dcbf3506-479f-451b-a020-c9de3aa2864c",
+    "lastNm": "Dean",
+    "firstNm": "Julius",
+    "jobNm": "Clerk",
+    "manager_id": 66928,
+    "hireDt": "1991-12-03",
+    "salary": 1050.0,
+    "commission": null,
+    "department": {
+      "id": "0dc901f0-34a6-4055-981d-8e1ad110dd96",
+      "dp_name": "MARKETING"
+    }
+  },
+  {
+    "id": "19f96306-61e6-41ea-93e1-d625231ad77e",
+    "lastNm": "Line",
+    "firstNm": "Mark",
+    "jobNm": "Clerk",
+    "manager_id": 67832,
+    "hireDt": "1992-01-23",
+    "salary": 1400.0,
+    "commission": null,
+    "department": {
+      "id": "cf4ff1e1-6f25-4ea2-8433-e10712550db2",
+      "dp_name": "FINANCE"
+    }
+  }
+]

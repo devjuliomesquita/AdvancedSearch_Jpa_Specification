@@ -34,13 +34,13 @@ public class EmployeeSpecificationBuilder {
             return null;
         }
 
-        return params.stream()
-                .map(EmployeeSpecification::new)
-                .reduce((spec1, spec2) -> {
-                    SearchCriteria criteria = spec2.getSearchCriteria();
-                    return (EmployeeSpecification) (SearchOperation.getDataOption(criteria.getDataOption()) == SearchOperation.ALL
-                                                ? Specification.where(spec1).and(spec2)
-                                                : Specification.where(spec1).or(spec2));
-                }).orElse(null);
+        Specification<Employee> specification = new EmployeeSpecification(params.get(0));
+        for (int i = 1; i < params.size(); i++) {
+            SearchCriteria criteria = params.get(i);
+            specification = SearchOperation.getDataOption(criteria.getDataOption()) == SearchOperation.ALL
+                    ? Specification.where(specification).and(new EmployeeSpecification(params.get(i)))
+                    : Specification.where(specification).or(new EmployeeSpecification(params.get(i)));
+        }
+        return specification;
     }
 }

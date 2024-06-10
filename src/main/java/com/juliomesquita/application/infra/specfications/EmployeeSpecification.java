@@ -31,119 +31,64 @@ public class EmployeeSpecification implements Specification<Employee> {
         return switch (Objects.requireNonNull(
                 SearchOperation.getSimpleOperation(searchCriteria.getOperation())
         )) {
-            case CONTAINS -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.like(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            "%" + strToSearch + "%"
-                    );
-                }
-                yield criteriaBuilder.like(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        "%" + strToSearch + "%"
-                );
+            case CONTAINS -> criteriaBuilder.like(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    "%" + strToSearch + "%"
+            );
 
-            }
-            case DOES_NOT_CONTAIN -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.notLike(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            "%" + strToSearch + "%"
-                    );
-                }
-                yield criteriaBuilder.notLike(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        "%" + strToSearch + "%"
-                );
-            }
-            case EQUAL -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.equal(
-                            departmentJoin(root).get(searchCriteria.getFilterKey()),
-                            searchCriteria.getValue()
-                    );
-                }
-                yield criteriaBuilder.equal(
-                        root.get(searchCriteria.getFilterKey()),
-                        searchCriteria.getValue()
-                );
-            }
-            case NOT_EQUAL -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.notEqual(
-                            departmentJoin(root).get(searchCriteria.getFilterKey()),
-                            searchCriteria.getValue()
-                    );
-                }
-                yield criteriaBuilder.notEqual(
-                        root.get(searchCriteria.getFilterKey()),
-                        searchCriteria.getValue()
-                );
-            }
-            case BEGINS_WITH -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.like(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            strToSearch + "%"
-                    );
-                }
-                yield criteriaBuilder.like(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        strToSearch + "%"
-                );
-            }
-            case DOES_NOT_BEGIN_WITH -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.notLike(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            strToSearch + "%"
-                    );
-                }
-                yield criteriaBuilder.notLike(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        strToSearch + "%"
-                );
-            }
-            case ENDS_WITH -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.like(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            "%" + strToSearch
-                    );
-                }
-                yield criteriaBuilder.like(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        "%" + strToSearch
-                );
-            }
-            case DOES_NOT_END_WITH -> {
-                if (searchCriteria.getFilterKey().equals("dp_name")) {
-                    yield criteriaBuilder.notLike(
-                            criteriaBuilder.lower(departmentJoin(root).get(searchCriteria.getFilterKey())),
-                            "%" + strToSearch
-                    );
-                }
-                yield criteriaBuilder.notLike(
-                        criteriaBuilder.lower(root.get(searchCriteria.getFilterKey())),
-                        "%" + strToSearch
-                );
-            }
-            case NUL -> criteriaBuilder.isNull(root.get(searchCriteria.getFilterKey()));
-            case NOT_NULL -> criteriaBuilder.isNotNull(root.get(searchCriteria.getFilterKey()));
+
+            case DOES_NOT_CONTAIN -> criteriaBuilder.notLike(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    "%" + strToSearch + "%"
+            );
+
+
+            case EQUAL -> criteriaBuilder.equal(
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
+                    searchCriteria.getValue()
+            );
+
+            case NOT_EQUAL -> criteriaBuilder.notEqual(
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
+                    searchCriteria.getValue()
+            );
+
+            case BEGINS_WITH -> criteriaBuilder.like(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    strToSearch + "%"
+            );
+
+            case DOES_NOT_BEGIN_WITH -> criteriaBuilder.notLike(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    strToSearch + "%"
+            );
+
+            case ENDS_WITH -> criteriaBuilder.like(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    "%" + strToSearch
+            );
+
+            case DOES_NOT_END_WITH -> criteriaBuilder.notLike(
+                    criteriaBuilder.lower(this.getPathObject(root, searchCriteria.getFilterKey())),
+                    "%" + strToSearch
+            );
+
+            case NUL -> criteriaBuilder.isNull(this.getPathObject(root, searchCriteria.getFilterKey()));
+            case NOT_NULL -> criteriaBuilder.isNotNull(this.getPathObject(root, searchCriteria.getFilterKey()));
             case GREATER_THAN -> criteriaBuilder.greaterThan(
-                    root.get(searchCriteria.getFilterKey()),
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
                     searchCriteria.getValue().toString()
-                    );
+            );
             case GREATER_THAN_EQUAL -> criteriaBuilder.greaterThanOrEqualTo(
-                    root.get(searchCriteria.getFilterKey()),
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
                     searchCriteria.getValue().toString()
             );
             case LESS_THAN -> criteriaBuilder.lessThan(
-                    root.get(searchCriteria.getFilterKey()),
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
                     searchCriteria.getValue().toString()
             );
             case LESS_THAN_EQUAL -> criteriaBuilder.lessThanOrEqualTo(
-                    root.get(searchCriteria.getFilterKey()),
+                    this.getPathObject(root, searchCriteria.getFilterKey()),
                     searchCriteria.getValue().toString()
             );
             case ANY, ALL -> null;
@@ -152,5 +97,12 @@ public class EmployeeSpecification implements Specification<Employee> {
 
     private Join<Employee, Department> departmentJoin(Root<Employee> root) {
         return root.join("department");
+    }
+
+    private Expression<String> getPathObject(Root<Employee> root, String value) {
+        if (value.equals("dp_name")) {
+            return departmentJoin(root).get(searchCriteria.getFilterKey());
+        }
+        return root.get(searchCriteria.getFilterKey());
     }
 }

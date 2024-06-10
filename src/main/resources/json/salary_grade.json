@@ -1,0 +1,27 @@
+[
+  {
+    "id": "72fc90e3-dc13-46a6-850b-1a245698dc58",
+    "min_salary":800,
+    "max_salary":1300
+  },
+  {
+    "id": "58e08ab2-234b-4eac-a814-c1f84057a8d5",
+    "min_salary":1301,
+    "max_salary":1500
+  },
+  {
+    "id": "2eee13bb-98b0-4d24-bd49-7e6282e816c9",
+    "min_salary":1501,
+    "max_salary":2100
+  },
+  {
+    "id": "7c3d85be-a7cd-4914-8128-a9c00089c1d5",
+    "min_salary":2101,
+    "max_salary":3100
+  },
+  {
+    "id": "0cab2998-956d-4d26-8ae6-7d60d01f3151",
+    "min_salary":3101,
+    "max_salary":9999
+  }
+]
