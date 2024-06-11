@@ -12,3 +12,11 @@ spring:
       ddl-auto: update
     show-sql: true
     database-platform: org.hibernate.dialect.H2Dialect
+springdoc:
+  swagger-ui:
+    tags-sorter: alpha
+    doc-expansion: none
+    operations-sorter: alpha
+    filter: true
+api-version: v1
+module-name: API Specifications

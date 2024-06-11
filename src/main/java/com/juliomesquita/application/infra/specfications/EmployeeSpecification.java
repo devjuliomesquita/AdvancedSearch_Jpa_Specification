@@ -96,6 +96,7 @@ public class EmployeeSpecification implements Specification<Employee> {
     }
 
     private Join<Employee, Department> departmentJoin(Root<Employee> root) {
+        root.fetch("department");
         return root.join("department");
     }
 
